@@ -1,0 +1,1002 @@
+******************************************************************************
+                  MSP430 Linker PC v20.2.2                     
+******************************************************************************
+>> Linked Wed Dec  9 16:10:30 2020
+
+OUTPUT FILE NAME:   <E_INK_DRIVER.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000f844
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000200  000001e9  00000017  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 0000c000   00003fde  00003929  000006b5  RWIX
+  BSLSIGNATURE          0000ffde   00000002  00000002  00000000  RWIX  ffff 
+  INT00                 0000ffe0   00000002  00000002  00000000  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.bss       0    00000200    00000199     UNINITIALIZED
+                  00000200    00000190     (.common:frame_buffer)
+                  00000390    00000002     (.common:TIMERCOUNT)
+                  00000392    00000002     (.common:TIME_MEASURE)
+                  00000394    00000001     (.common:BsShift)
+                  00000395    00000001     (.common:DISPLAY_COLUMN)
+                  00000396    00000001     (.common:DISPLAY_ROW)
+                  00000397    00000001     (.common:inverse_mode)
+                  00000398    00000001     (.common:masking)
+
+.stack     0    000003b0    00000050     UNINITIALIZED
+                  000003b0    00000002     rts430_eabi.lib : boot.c.obj (.stack)
+                  000003b2    0000004e     --HOLE--
+
+.const     0    0000c000    00003083     
+                  0000c000    00001388     main.obj (.const:.string:Doraemon)
+                  0000d388    00001388     main.obj (.const:.string:Sonic)
+                  0000e710    00000200     main.obj (.const:Font2)
+                  0000e910    0000008c     main.obj (.const:.string)
+                  0000e99c    0000001f     main.obj (.const:.string:f02_87)
+                  0000e9bb    00000001     --HOLE-- [fill = 0]
+                  0000e9bc    0000001e     display_driver.obj (.const:.string:lut_full_update)
+                  0000e9da    0000001d     main.obj (.const:.string:f02_37)
+                  0000e9f7    00000001     --HOLE-- [fill = 0]
+                  0000e9f8    0000001b     main.obj (.const:.string:f02_109)
+                  0000ea13    00000001     --HOLE-- [fill = 0]
+                  0000ea14    00000019     main.obj (.const:.string:f02_64)
+                  0000ea2d    00000001     --HOLE-- [fill = 0]
+                  0000ea2e    00000019     main.obj (.const:.string:f02_77)
+                  0000ea47    00000001     --HOLE-- [fill = 0]
+                  0000ea48    00000019     main.obj (.const:.string:f02_79)
+                  0000ea61    00000001     --HOLE-- [fill = 0]
+                  0000ea62    00000019     main.obj (.const:.string:f02_81)
+                  0000ea7b    00000001     --HOLE-- [fill = 0]
+                  0000ea7c    00000017     main.obj (.const:.string:f02_119)
+                  0000ea93    00000001     --HOLE-- [fill = 0]
+                  0000ea94    00000017     main.obj (.const:.string:f02_35)
+                  0000eaab    00000001     --HOLE-- [fill = 0]
+                  0000eaac    00000017     main.obj (.const:.string:f02_71)
+                  0000eac3    00000001     --HOLE-- [fill = 0]
+                  0000eac4    00000017     main.obj (.const:.string:f02_75)
+                  0000eadb    00000001     --HOLE-- [fill = 0]
+                  0000eadc    00000017     main.obj (.const:.string:f02_88)
+                  0000eaf3    00000001     --HOLE-- [fill = 0]
+                  0000eaf4    00000017     main.obj (.const:.string:f02_89)
+                  0000eb0b    00000001     --HOLE-- [fill = 0]
+                  0000eb0c    00000015     main.obj (.const:.string:f02_38)
+                  0000eb21    00000001     --HOLE-- [fill = 0]
+                  0000eb22    00000015     main.obj (.const:.string:f02_66)
+                  0000eb37    00000001     --HOLE-- [fill = 0]
+                  0000eb38    00000015     main.obj (.const:.string:f02_67)
+                  0000eb4d    00000001     --HOLE-- [fill = 0]
+                  0000eb4e    00000015     main.obj (.const:.string:f02_68)
+                  0000eb63    00000001     --HOLE-- [fill = 0]
+                  0000eb64    00000015     main.obj (.const:.string:f02_72)
+                  0000eb79    00000001     --HOLE-- [fill = 0]
+                  0000eb7a    00000015     main.obj (.const:.string:f02_78)
+                  0000eb8f    00000001     --HOLE-- [fill = 0]
+                  0000eb90    00000015     main.obj (.const:.string:f02_80)
+                  0000eba5    00000001     --HOLE-- [fill = 0]
+                  0000eba6    00000015     main.obj (.const:.string:f02_82)
+                  0000ebbb    00000001     --HOLE-- [fill = 0]
+                  0000ebbc    00000015     main.obj (.const:.string:f02_85)
+                  0000ebd1    00000001     --HOLE-- [fill = 0]
+                  0000ebd2    00000015     main.obj (.const:.string:f02_90)
+                  0000ebe7    00000001     --HOLE-- [fill = 0]
+                  0000ebe8    00000013     main.obj (.const:.string:f02_111)
+                  0000ebfb    00000001     --HOLE-- [fill = 0]
+                  0000ebfc    00000013     main.obj (.const:.string:f02_126)
+                  0000ec0f    00000001     --HOLE-- [fill = 0]
+                  0000ec10    00000013     main.obj (.const:.string:f02_36)
+                  0000ec23    00000001     --HOLE-- [fill = 0]
+                  0000ec24    00000013     main.obj (.const:.string:f02_63)
+                  0000ec37    00000001     --HOLE-- [fill = 0]
+                  0000ec38    00000013     main.obj (.const:.string:f02_65)
+                  0000ec4b    00000001     --HOLE-- [fill = 0]
+                  0000ec4c    00000013     main.obj (.const:.string:f02_83)
+                  0000ec5f    00000001     --HOLE-- [fill = 0]
+                  0000ec60    00000013     main.obj (.const:.string:f02_84)
+                  0000ec73    00000001     --HOLE-- [fill = 0]
+                  0000ec74    00000013     main.obj (.const:.string:f02_86)
+                  0000ec87    00000001     --HOLE-- [fill = 0]
+                  0000ec88    00000011     main.obj (.const:.string:f02_100)
+                  0000ec99    00000001     --HOLE-- [fill = 0]
+                  0000ec9a    00000011     main.obj (.const:.string:f02_101)
+                  0000ecab    00000001     --HOLE-- [fill = 0]
+                  0000ecac    00000011     main.obj (.const:.string:f02_103)
+                  0000ecbd    00000001     --HOLE-- [fill = 0]
+                  0000ecbe    00000011     main.obj (.const:.string:f02_104)
+                  0000eccf    00000001     --HOLE-- [fill = 0]
+                  0000ecd0    00000011     main.obj (.const:.string:f02_107)
+                  0000ece1    00000001     --HOLE-- [fill = 0]
+                  0000ece2    00000011     main.obj (.const:.string:f02_110)
+                  0000ecf3    00000001     --HOLE-- [fill = 0]
+                  0000ecf4    00000011     main.obj (.const:.string:f02_112)
+                  0000ed05    00000001     --HOLE-- [fill = 0]
+                  0000ed06    00000011     main.obj (.const:.string:f02_113)
+                  0000ed17    00000001     --HOLE-- [fill = 0]
+                  0000ed18    00000011     main.obj (.const:.string:f02_114)
+                  0000ed29    00000001     --HOLE-- [fill = 0]
+                  0000ed2a    00000011     main.obj (.const:.string:f02_117)
+                  0000ed3b    00000001     --HOLE-- [fill = 0]
+                  0000ed3c    00000011     main.obj (.const:.string:f02_118)
+                  0000ed4d    00000001     --HOLE-- [fill = 0]
+                  0000ed4e    00000011     main.obj (.const:.string:f02_121)
+                  0000ed5f    00000001     --HOLE-- [fill = 0]
+                  0000ed60    00000011     main.obj (.const:.string:f02_122)
+                  0000ed71    00000001     --HOLE-- [fill = 0]
+                  0000ed72    00000011     main.obj (.const:.string:f02_29)
+                  0000ed83    00000001     --HOLE-- [fill = 0]
+                  0000ed84    00000011     main.obj (.const:.string:f02_30)
+                  0000ed95    00000001     --HOLE-- [fill = 0]
+                  0000ed96    00000011     main.obj (.const:.string:f02_31)
+                  0000eda7    00000001     --HOLE-- [fill = 0]
+                  0000eda8    00000011     main.obj (.const:.string:f02_32)
+                  0000edb9    00000001     --HOLE-- [fill = 0]
+                  0000edba    00000011     main.obj (.const:.string:f02_42)
+                  0000edcb    00000001     --HOLE-- [fill = 0]
+                  0000edcc    00000011     main.obj (.const:.string:f02_48)
+                  0000eddd    00000001     --HOLE-- [fill = 0]
+                  0000edde    00000011     main.obj (.const:.string:f02_51)
+                  0000edef    00000001     --HOLE-- [fill = 0]
+                  0000edf0    00000011     main.obj (.const:.string:f02_52)
+                  0000ee01    00000001     --HOLE-- [fill = 0]
+                  0000ee02    00000011     main.obj (.const:.string:f02_53)
+                  0000ee13    00000001     --HOLE-- [fill = 0]
+                  0000ee14    00000011     main.obj (.const:.string:f02_54)
+                  0000ee25    00000001     --HOLE-- [fill = 0]
+                  0000ee26    00000011     main.obj (.const:.string:f02_55)
+                  0000ee37    00000001     --HOLE-- [fill = 0]
+                  0000ee38    00000011     main.obj (.const:.string:f02_56)
+                  0000ee49    00000001     --HOLE-- [fill = 0]
+                  0000ee4a    00000011     main.obj (.const:.string:f02_57)
+                  0000ee5b    00000001     --HOLE-- [fill = 0]
+                  0000ee5c    00000011     main.obj (.const:.string:f02_60)
+                  0000ee6d    00000001     --HOLE-- [fill = 0]
+                  0000ee6e    00000011     main.obj (.const:.string:f02_61)
+                  0000ee7f    00000001     --HOLE-- [fill = 0]
+                  0000ee80    00000011     main.obj (.const:.string:f02_62)
+                  0000ee91    00000001     --HOLE-- [fill = 0]
+                  0000ee92    00000011     main.obj (.const:.string:f02_69)
+                  0000eea3    00000001     --HOLE-- [fill = 0]
+                  0000eea4    00000011     main.obj (.const:.string:f02_70)
+                  0000eeb5    00000001     --HOLE-- [fill = 0]
+                  0000eeb6    00000011     main.obj (.const:.string:f02_95)
+                  0000eec7    00000001     --HOLE-- [fill = 0]
+                  0000eec8    00000011     main.obj (.const:.string:f02_97)
+                  0000eed9    00000001     --HOLE-- [fill = 0]
+                  0000eeda    00000011     main.obj (.const:.string:f02_98)
+                  0000eeeb    00000001     --HOLE-- [fill = 0]
+                  0000eeec    00000011     main.obj (.const:.string:f02_99)
+                  0000eefd    00000001     --HOLE-- [fill = 0]
+                  0000eefe    0000000f     main.obj (.const:.string:f02_115)
+                  0000ef0d    00000001     --HOLE-- [fill = 0]
+                  0000ef0e    0000000f     main.obj (.const:.string:f02_120)
+                  0000ef1d    00000001     --HOLE-- [fill = 0]
+                  0000ef1e    0000000f     main.obj (.const:.string:f02_43)
+                  0000ef2d    00000001     --HOLE-- [fill = 0]
+                  0000ef2e    0000000f     main.obj (.const:.string:f02_47)
+                  0000ef3d    00000001     --HOLE-- [fill = 0]
+                  0000ef3e    0000000f     main.obj (.const:.string:f02_50)
+                  0000ef4d    00000001     --HOLE-- [fill = 0]
+                  0000ef4e    0000000f     main.obj (.const:.string:f02_76)
+                  0000ef5d    00000001     --HOLE-- [fill = 0]
+                  0000ef5e    0000000f     main.obj (.const:.string:f02_94)
+                  0000ef6d    00000001     --HOLE-- [fill = 0]
+                  0000ef6e    0000000f     main.obj (.const:.string:f02_default)
+                  0000ef7d    00000001     --HOLE-- [fill = 0]
+                  0000ef7e    0000000d     main.obj (.const:.string:f02_102)
+                  0000ef8b    00000001     --HOLE-- [fill = 0]
+                  0000ef8c    0000000d     main.obj (.const:.string:f02_123)
+                  0000ef99    00000001     --HOLE-- [fill = 0]
+                  0000ef9a    0000000d     main.obj (.const:.string:f02_125)
+                  0000efa7    00000001     --HOLE-- [fill = 0]
+                  0000efa8    0000000d     main.obj (.const:.string:f02_92)
+                  0000efb5    00000001     --HOLE-- [fill = 0]
+                  0000efb6    0000000b     main.obj (.const:.string:f02_116)
+                  0000efc1    00000001     --HOLE-- [fill = 0]
+                  0000efc2    0000000b     main.obj (.const:.string:f02_34)
+                  0000efcd    00000001     --HOLE-- [fill = 0]
+                  0000efce    0000000b     main.obj (.const:.string:f02_40)
+                  0000efd9    00000001     --HOLE-- [fill = 0]
+                  0000efda    0000000b     main.obj (.const:.string:f02_41)
+                  0000efe5    00000001     --HOLE-- [fill = 0]
+                  0000efe6    0000000b     main.obj (.const:.string:f02_49)
+                  0000eff1    00000001     --HOLE-- [fill = 0]
+                  0000eff2    0000000b     main.obj (.const:.string:f02_74)
+                  0000effd    00000001     --HOLE-- [fill = 0]
+                  0000effe    0000000b     main.obj (.const:.string:f02_91)
+                  0000f009    00000001     --HOLE-- [fill = 0]
+                  0000f00a    0000000b     main.obj (.const:.string:f02_93)
+                  0000f015    00000001     --HOLE-- [fill = 0]
+                  0000f016    00000009     main.obj (.const:.string:f02_106)
+                  0000f01f    00000001     --HOLE-- [fill = 0]
+                  0000f020    00000009     main.obj (.const:.string:f02_44)
+                  0000f029    00000001     --HOLE-- [fill = 0]
+                  0000f02a    00000009     main.obj (.const:.string:f02_45)
+                  0000f033    00000001     --HOLE-- [fill = 0]
+                  0000f034    00000009     main.obj (.const:.string:f02_46)
+                  0000f03d    00000001     --HOLE-- [fill = 0]
+                  0000f03e    00000009     main.obj (.const:.string:f02_96)
+                  0000f047    00000001     --HOLE-- [fill = 0]
+                  0000f048    00000007     main.obj (.const:.string:f02_105)
+                  0000f04f    00000001     --HOLE-- [fill = 0]
+                  0000f050    00000007     main.obj (.const:.string:f02_108)
+                  0000f057    00000001     --HOLE-- [fill = 0]
+                  0000f058    00000007     main.obj (.const:.string:f02_33)
+                  0000f05f    00000001     --HOLE-- [fill = 0]
+                  0000f060    00000007     main.obj (.const:.string:f02_58)
+                  0000f067    00000001     --HOLE-- [fill = 0]
+                  0000f068    00000007     main.obj (.const:.string:f02_59)
+                  0000f06f    00000001     --HOLE-- [fill = 0]
+                  0000f070    00000007     main.obj (.const:.string:f02_73)
+                  0000f077    00000001     --HOLE-- [fill = 0]
+                  0000f078    00000005     main.obj (.const:.string:f02_124)
+                  0000f07d    00000001     --HOLE-- [fill = 0]
+                  0000f07e    00000005     main.obj (.const:.string:f02_39)
+
+.text      0    0000f084    0000089c     
+                  0000f084    00000180     main.obj (.text:main)
+                  0000f204    0000017e     display_driver.obj (.text:LoadText)
+                  0000f382    000000ee     graphlib.obj (.text:OutChar)
+                  0000f470    0000008a     display_driver.obj (.text:InitDisplay)
+                  0000f4fa    00000082     display_driver.obj (.text:BlankScreen)
+                  0000f57c    00000064     display_driver.obj (.text:MapRAMToDisplay)
+                  0000f5e0    00000054     display_driver.obj (.text:LoadBitmap)
+                  0000f634    00000054     display_driver.obj (.text:SerialOut)
+                  0000f688    00000042     rts430_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  0000f6ca    00000040     display_driver.obj (.text:SetLocation)
+                  0000f70a    00000038     graphlib.obj (.text:OutString)
+                  0000f742    00000036     display_driver.obj (.text:WriteLUT)
+                  0000f778    0000002c     graphlib.obj (.text:InitFrameBuffer)
+                  0000f7a4    0000002c     rts430_eabi.lib : asr16.asm.obj (.text)
+                  0000f7d0    0000002a     graphlib.obj (.text:WriteFrameBuffer)
+                  0000f7fa    00000026     display_driver.obj (.text:Reset)
+                  0000f820    00000024     display_driver.obj (.text:DisplayFrame)
+                  0000f844    0000001c     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noargs)
+                  0000f860    0000001a     display_driver.obj (.text:InitDriver)
+                  0000f87a    0000001a     main.obj (.text:watchdog_timer)
+                  0000f894    00000014     display_driver.obj (.text:WriteCommand)
+                  0000f8a8    00000014     display_driver.obj (.text:WriteData)
+                  0000f8bc    00000014     rts430_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  0000f8d0    00000014                     : mult16.asm.obj (.text)
+                  0000f8e4    00000010                     : epilog.asm.obj (.text)
+                  0000f8f4    0000000a     timer.obj (.text:CallInISR)
+                  0000f8fe    00000008     display_driver.obj (.text:PollBusy)
+                  0000f906    00000008     rts430_eabi.lib : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000f90e    00000006     timer.obj (.text:InitTimerSystem)
+                  0000f914    00000006     rts430_eabi.lib : exit.c.obj (.text:abort)
+                  0000f91a    00000004                     : pre_init.c.obj (.text:_system_pre_init)
+                  0000f91e    00000002                     : startup.c.obj (.text:_system_post_cinit)
+
+.cinit     0    0000f920    0000000a     
+                  0000f920    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000f924    00000002     (__TI_handler_table)
+                  0000f926    00000004     (__TI_cinit_table)
+
+.binit     0    0000c000    00000000     
+
+.init_array 
+*          0    0000c000    00000000     UNINITIALIZED
+
+TRAPINT    0    0000ffe0    00000002     
+                  0000ffe0    00000002     rts430_eabi.lib : int00.asm.obj (.int00)
+
+PORT1      0    0000ffe4    00000002     
+                  0000ffe4    00000002     rts430_eabi.lib : int02.asm.obj (.int02)
+
+PORT2      0    0000ffe6    00000002     
+                  0000ffe6    00000002     rts430_eabi.lib : int03.asm.obj (.int03)
+
+ADC10      0    0000ffea    00000002     
+                  0000ffea    00000002     rts430_eabi.lib : int05.asm.obj (.int05)
+
+USCIAB0TX 
+*          0    0000ffec    00000002     
+                  0000ffec    00000002     rts430_eabi.lib : int06.asm.obj (.int06)
+
+USCIAB0RX 
+*          0    0000ffee    00000002     
+                  0000ffee    00000002     rts430_eabi.lib : int07.asm.obj (.int07)
+
+TIMER0_A1 
+*          0    0000fff0    00000002     
+                  0000fff0    00000002     rts430_eabi.lib : int08.asm.obj (.int08)
+
+TIMER0_A0 
+*          0    0000fff2    00000002     
+                  0000fff2    00000002     rts430_eabi.lib : int09.asm.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     main.obj (.int10)
+
+COMPARATORA 
+*          0    0000fff6    00000002     
+                  0000fff6    00000002     rts430_eabi.lib : int11.asm.obj (.int11)
+
+TIMER1_A1 
+*          0    0000fff8    00000002     
+                  0000fff8    00000002     rts430_eabi.lib : int12.asm.obj (.int12)
+
+TIMER1_A0 
+*          0    0000fffa    00000002     
+                  0000fffa    00000002     rts430_eabi.lib : int13.asm.obj (.int13)
+
+NMI        0    0000fffc    00000002     
+                  0000fffc    00000002     rts430_eabi.lib : int14.asm.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430_eabi.lib : boot.c.obj (.reset)
+
+$fill000   0    0000ffde    00000002     
+                  0000ffde    00000002     --HOLE-- [fill = ffff]
+
+MODULE SUMMARY
+
+       Module                 code   ro data   rw data
+       ------                 ----   -------   -------
+    .\
+       main.obj               410    12293     2      
+       display_driver.obj     1184   30        402    
+       graphlib.obj           380    0         3      
+       timer.obj              16     0         2      
+    +--+----------------------+------+---------+---------+
+       Total:                 1990   12323     409    
+                                                      
+    C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-msp430_20.2.2.LTS\lib\rts430_eabi.lib
+       autoinit.c.obj         66     0         0      
+       asr16.asm.obj          44     0         0      
+       boot.c.obj             28     2         0      
+       copy_zero_init.c.obj   20     0         0      
+       mult16.asm.obj         20     0         0      
+       epilog.asm.obj         16     0         0      
+       isr_trap.asm.obj       8      0         0      
+       exit.c.obj             6      0         0      
+       pre_init.c.obj         4      0         0      
+       int00.asm.obj          0      2         0      
+       int02.asm.obj          0      2         0      
+       int03.asm.obj          0      2         0      
+       int05.asm.obj          0      2         0      
+       int06.asm.obj          0      2         0      
+       int07.asm.obj          0      2         0      
+       int08.asm.obj          0      2         0      
+       int09.asm.obj          0      2         0      
+       int11.asm.obj          0      2         0      
+       int12.asm.obj          0      2         0      
+       int13.asm.obj          0      2         0      
+       int14.asm.obj          0      2         0      
+       startup.c.obj          2      0         0      
+    +--+----------------------+------+---------+---------+
+       Total:                 214    26        0      
+                                                      
+       Stack:                 0      0         80     
+       Linker Generated:      0      10        0      
+    +--+----------------------+------+---------+---------+
+       Grand Total:           2204   12359     489    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000f926 records: 1, size/record: 4, table size: 4
+	.bss: load addr=0000f920, load size=00000004 bytes, run addr=00000200, run size=00000199 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000f924 records: 1, size/record: 2, table size: 2
+	index: 0, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+0000004a  ADC10AE0                      
+000001b0  ADC10CTL0                     
+000001b2  ADC10CTL1                     
+00000048  ADC10DTC0                     
+00000049  ADC10DTC1                     
+000001b4  ADC10MEM                      
+000001bc  ADC10SA                       
+00000057  BCSCTL1                       
+00000058  BCSCTL2                       
+00000053  BCSCTL3                       
+0000f4fa  BlankScreen                   
+00000394  BsShift                       
+0000f914  C$$EXIT                       
+00000059  CACTL1                        
+0000005a  CACTL2                        
+000010fb  CALBC1_12MHZ                  
+000010f9  CALBC1_16MHZ                  
+000010ff  CALBC1_1MHZ                   
+000010fd  CALBC1_8MHZ                   
+000010fa  CALDCO_12MHZ                  
+000010f8  CALDCO_16MHZ                  
+000010fe  CALDCO_1MHZ                   
+000010fc  CALDCO_8MHZ                   
+0000005b  CAPD                          
+0000f8f4  CallInISR                     
+00000056  DCOCTL                        
+00000395  DISPLAY_COLUMN                
+00000396  DISPLAY_ROW                   
+0000f820  DisplayFrame                  
+00000128  FCTL1                         
+0000012a  FCTL2                         
+0000012c  FCTL3                         
+0000e710  Font2                         
+00000000  IE1                           
+00000001  IE2                           
+00000002  IFG1                          
+00000003  IFG2                          
+0000f470  InitDisplay                   
+0000f860  InitDriver                    
+0000f778  InitFrameBuffer               
+0000f90e  InitTimerSystem               
+0000f5e0  LoadBitmap                    
+0000f204  LoadText                      
+0000f57c  MapRAMToDisplay               
+0000f382  OutChar                       
+0000f70a  OutString                     
+00000022  P1DIR                         
+00000025  P1IE                          
+00000024  P1IES                         
+00000023  P1IFG                         
+00000020  P1IN                          
+00000021  P1OUT                         
+00000027  P1REN                         
+00000026  P1SEL                         
+00000041  P1SEL2                        
+0000002a  P2DIR                         
+0000002d  P2IE                          
+0000002c  P2IES                         
+0000002b  P2IFG                         
+00000028  P2IN                          
+00000029  P2OUT                         
+0000002f  P2REN                         
+0000002e  P2SEL                         
+00000042  P2SEL2                        
+0000001a  P3DIR                         
+00000018  P3IN                          
+00000019  P3OUT                         
+00000010  P3REN                         
+0000001b  P3SEL                         
+00000043  P3SEL2                        
+0000f8fe  PollBusy                      
+0000f7fa  Reset                         
+0000f634  SerialOut                     
+0000f6ca  SetLocation                   
+00000172  TA0CCR0                       
+00000174  TA0CCR1                       
+00000176  TA0CCR2                       
+00000162  TA0CCTL0                      
+00000164  TA0CCTL1                      
+00000166  TA0CCTL2                      
+00000160  TA0CTL                        
+0000012e  TA0IV                         
+00000170  TA0R                          
+00000192  TA1CCR0                       
+00000194  TA1CCR1                       
+00000196  TA1CCR2                       
+00000182  TA1CCTL0                      
+00000184  TA1CCTL1                      
+00000186  TA1CCTL2                      
+00000180  TA1CTL                        
+0000011e  TA1IV                         
+00000190  TA1R                          
+00000390  TIMERCOUNT                    
+00000392  TIME_MEASURE                  
+000010db  TLV_ADC10_1_LEN               
+000010da  TLV_ADC10_1_TAG               
+000010c0  TLV_CHECKSUM                  
+000010f7  TLV_DCO_30_LEN                
+000010f6  TLV_DCO_30_TAG                
+0000005d  UCA0ABCTL                     
+00000062  UCA0BR0                       
+00000063  UCA0BR1                       
+00000060  UCA0CTL0                      
+00000061  UCA0CTL1                      
+0000005f  UCA0IRRCTL                    
+0000005e  UCA0IRTCTL                    
+00000064  UCA0MCTL                      
+00000066  UCA0RXBUF                     
+00000065  UCA0STAT                      
+00000067  UCA0TXBUF                     
+0000006a  UCB0BR0                       
+0000006b  UCB0BR1                       
+00000068  UCB0CTL0                      
+00000069  UCB0CTL1                      
+0000006c  UCB0I2CIE                     
+00000118  UCB0I2COA                     
+0000011a  UCB0I2CSA                     
+0000006e  UCB0RXBUF                     
+0000006d  UCB0STAT                      
+0000006f  UCB0TXBUF                     
+00000120  WDTCTL                        
+0000f894  WriteCommand                  
+0000f8a8  WriteData                     
+0000f7d0  WriteFrameBuffer              
+0000f742  WriteLUT                      
+00000400  __STACK_END                   
+00000050  __STACK_SIZE                  
+0000f926  __TI_CINIT_Base               
+0000f92a  __TI_CINIT_Limit              
+0000f924  __TI_Handler_Table_Base       
+0000f926  __TI_Handler_Table_Limit      
+0000f906  __TI_ISR_TRAP                 
+0000f688  __TI_auto_init_nobinit_nopinit
+0000ffe0  __TI_int00                    
+0000ffe4  __TI_int02                    
+0000ffe6  __TI_int03                    
+0000ffea  __TI_int05                    
+0000ffec  __TI_int06                    
+0000ffee  __TI_int07                    
+0000fff0  __TI_int08                    
+0000fff2  __TI_int09                    
+0000fff4  __TI_int10                    
+0000fff6  __TI_int11                    
+0000fff8  __TI_int12                    
+0000fffa  __TI_int13                    
+0000fffc  __TI_int14                    
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+0000f8bc  __TI_zero_init_nomemset       
+ffffffff  __c_args__                    
+0000f8f0  __mspabi_func_epilog_1        
+0000f8ee  __mspabi_func_epilog_2        
+0000f8ec  __mspabi_func_epilog_3        
+0000f8ea  __mspabi_func_epilog_4        
+0000f8e8  __mspabi_func_epilog_5        
+0000f8e6  __mspabi_func_epilog_6        
+0000f8e4  __mspabi_func_epilog_7        
+0000f8d0  __mspabi_mpyi                 
+0000f8d0  __mspabi_mpyi_sw              
+0000f7a4  __mspabi_srai                 
+0000f7cc  __mspabi_srai_1               
+0000f7ba  __mspabi_srai_10              
+0000f7b8  __mspabi_srai_11              
+0000f7b6  __mspabi_srai_12              
+0000f7b4  __mspabi_srai_13              
+0000f7b2  __mspabi_srai_14              
+0000f7b0  __mspabi_srai_15              
+0000f7ca  __mspabi_srai_2               
+0000f7c8  __mspabi_srai_3               
+0000f7c6  __mspabi_srai_4               
+0000f7c4  __mspabi_srai_5               
+0000f7c2  __mspabi_srai_6               
+0000f7c0  __mspabi_srai_7               
+0000f7be  __mspabi_srai_8               
+0000f7bc  __mspabi_srai_9               
+0000f844  _c_int00_noargs               
+0000fffe  _reset_vector                 
+000003b0  _stack                        
+0000f91e  _system_post_cinit            
+0000f91a  _system_pre_init              
+0000f914  abort                         
+0000ec88  f02_100                       
+0000ec9a  f02_101                       
+0000ef7e  f02_102                       
+0000ecac  f02_103                       
+0000ecbe  f02_104                       
+0000f048  f02_105                       
+0000f016  f02_106                       
+0000ecd0  f02_107                       
+0000f050  f02_108                       
+0000e9f8  f02_109                       
+0000ece2  f02_110                       
+0000ebe8  f02_111                       
+0000ecf4  f02_112                       
+0000ed06  f02_113                       
+0000ed18  f02_114                       
+0000eefe  f02_115                       
+0000efb6  f02_116                       
+0000ed2a  f02_117                       
+0000ed3c  f02_118                       
+0000ea7c  f02_119                       
+0000ef0e  f02_120                       
+0000ed4e  f02_121                       
+0000ed60  f02_122                       
+0000ef8c  f02_123                       
+0000f078  f02_124                       
+0000ef9a  f02_125                       
+0000ebfc  f02_126                       
+0000ed72  f02_29                        
+0000ed84  f02_30                        
+0000ed96  f02_31                        
+0000eda8  f02_32                        
+0000f058  f02_33                        
+0000efc2  f02_34                        
+0000ea94  f02_35                        
+0000ec10  f02_36                        
+0000e9da  f02_37                        
+0000eb0c  f02_38                        
+0000f07e  f02_39                        
+0000efce  f02_40                        
+0000efda  f02_41                        
+0000edba  f02_42                        
+0000ef1e  f02_43                        
+0000f020  f02_44                        
+0000f02a  f02_45                        
+0000f034  f02_46                        
+0000ef2e  f02_47                        
+0000edcc  f02_48                        
+0000efe6  f02_49                        
+0000ef3e  f02_50                        
+0000edde  f02_51                        
+0000edf0  f02_52                        
+0000ee02  f02_53                        
+0000ee14  f02_54                        
+0000ee26  f02_55                        
+0000ee38  f02_56                        
+0000ee4a  f02_57                        
+0000f060  f02_58                        
+0000f068  f02_59                        
+0000ee5c  f02_60                        
+0000ee6e  f02_61                        
+0000ee80  f02_62                        
+0000ec24  f02_63                        
+0000ea14  f02_64                        
+0000ec38  f02_65                        
+0000eb22  f02_66                        
+0000eb38  f02_67                        
+0000eb4e  f02_68                        
+0000ee92  f02_69                        
+0000eea4  f02_70                        
+0000eaac  f02_71                        
+0000eb64  f02_72                        
+0000f070  f02_73                        
+0000eff2  f02_74                        
+0000eac4  f02_75                        
+0000ef4e  f02_76                        
+0000ea2e  f02_77                        
+0000eb7a  f02_78                        
+0000ea48  f02_79                        
+0000eb90  f02_80                        
+0000ea62  f02_81                        
+0000eba6  f02_82                        
+0000ec4c  f02_83                        
+0000ec60  f02_84                        
+0000ebbc  f02_85                        
+0000ec74  f02_86                        
+0000e99c  f02_87                        
+0000eadc  f02_88                        
+0000eaf4  f02_89                        
+0000ebd2  f02_90                        
+0000effe  f02_91                        
+0000efa8  f02_92                        
+0000f00a  f02_93                        
+0000ef5e  f02_94                        
+0000eeb6  f02_95                        
+0000f03e  f02_96                        
+0000eec8  f02_97                        
+0000eeda  f02_98                        
+0000eeec  f02_99                        
+0000ef6e  f02_default                   
+00000200  frame_buffer                  
+00000397  inverse_mode                  
+0000e9bc  lut_full_update               
+0000f084  main                          
+00000398  masking                       
+0000f87a  watchdog_timer                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  IE1                           
+00000001  IE2                           
+00000002  IFG1                          
+00000003  IFG2                          
+00000010  P3REN                         
+00000018  P3IN                          
+00000019  P3OUT                         
+0000001a  P3DIR                         
+0000001b  P3SEL                         
+00000020  P1IN                          
+00000021  P1OUT                         
+00000022  P1DIR                         
+00000023  P1IFG                         
+00000024  P1IES                         
+00000025  P1IE                          
+00000026  P1SEL                         
+00000027  P1REN                         
+00000028  P2IN                          
+00000029  P2OUT                         
+0000002a  P2DIR                         
+0000002b  P2IFG                         
+0000002c  P2IES                         
+0000002d  P2IE                          
+0000002e  P2SEL                         
+0000002f  P2REN                         
+00000041  P1SEL2                        
+00000042  P2SEL2                        
+00000043  P3SEL2                        
+00000048  ADC10DTC0                     
+00000049  ADC10DTC1                     
+0000004a  ADC10AE0                      
+00000050  __STACK_SIZE                  
+00000053  BCSCTL3                       
+00000056  DCOCTL                        
+00000057  BCSCTL1                       
+00000058  BCSCTL2                       
+00000059  CACTL1                        
+0000005a  CACTL2                        
+0000005b  CAPD                          
+0000005d  UCA0ABCTL                     
+0000005e  UCA0IRTCTL                    
+0000005f  UCA0IRRCTL                    
+00000060  UCA0CTL0                      
+00000061  UCA0CTL1                      
+00000062  UCA0BR0                       
+00000063  UCA0BR1                       
+00000064  UCA0MCTL                      
+00000065  UCA0STAT                      
+00000066  UCA0RXBUF                     
+00000067  UCA0TXBUF                     
+00000068  UCB0CTL0                      
+00000069  UCB0CTL1                      
+0000006a  UCB0BR0                       
+0000006b  UCB0BR1                       
+0000006c  UCB0I2CIE                     
+0000006d  UCB0STAT                      
+0000006e  UCB0RXBUF                     
+0000006f  UCB0TXBUF                     
+00000118  UCB0I2COA                     
+0000011a  UCB0I2CSA                     
+0000011e  TA1IV                         
+00000120  WDTCTL                        
+00000128  FCTL1                         
+0000012a  FCTL2                         
+0000012c  FCTL3                         
+0000012e  TA0IV                         
+00000160  TA0CTL                        
+00000162  TA0CCTL0                      
+00000164  TA0CCTL1                      
+00000166  TA0CCTL2                      
+00000170  TA0R                          
+00000172  TA0CCR0                       
+00000174  TA0CCR1                       
+00000176  TA0CCR2                       
+00000180  TA1CTL                        
+00000182  TA1CCTL0                      
+00000184  TA1CCTL1                      
+00000186  TA1CCTL2                      
+00000190  TA1R                          
+00000192  TA1CCR0                       
+00000194  TA1CCR1                       
+00000196  TA1CCR2                       
+000001b0  ADC10CTL0                     
+000001b2  ADC10CTL1                     
+000001b4  ADC10MEM                      
+000001bc  ADC10SA                       
+00000200  frame_buffer                  
+00000390  TIMERCOUNT                    
+00000392  TIME_MEASURE                  
+00000394  BsShift                       
+00000395  DISPLAY_COLUMN                
+00000396  DISPLAY_ROW                   
+00000397  inverse_mode                  
+00000398  masking                       
+000003b0  _stack                        
+00000400  __STACK_END                   
+000010c0  TLV_CHECKSUM                  
+000010da  TLV_ADC10_1_TAG               
+000010db  TLV_ADC10_1_LEN               
+000010f6  TLV_DCO_30_TAG                
+000010f7  TLV_DCO_30_LEN                
+000010f8  CALDCO_16MHZ                  
+000010f9  CALBC1_16MHZ                  
+000010fa  CALDCO_12MHZ                  
+000010fb  CALBC1_12MHZ                  
+000010fc  CALDCO_8MHZ                   
+000010fd  CALBC1_8MHZ                   
+000010fe  CALDCO_1MHZ                   
+000010ff  CALBC1_1MHZ                   
+0000e710  Font2                         
+0000e99c  f02_87                        
+0000e9bc  lut_full_update               
+0000e9da  f02_37                        
+0000e9f8  f02_109                       
+0000ea14  f02_64                        
+0000ea2e  f02_77                        
+0000ea48  f02_79                        
+0000ea62  f02_81                        
+0000ea7c  f02_119                       
+0000ea94  f02_35                        
+0000eaac  f02_71                        
+0000eac4  f02_75                        
+0000eadc  f02_88                        
+0000eaf4  f02_89                        
+0000eb0c  f02_38                        
+0000eb22  f02_66                        
+0000eb38  f02_67                        
+0000eb4e  f02_68                        
+0000eb64  f02_72                        
+0000eb7a  f02_78                        
+0000eb90  f02_80                        
+0000eba6  f02_82                        
+0000ebbc  f02_85                        
+0000ebd2  f02_90                        
+0000ebe8  f02_111                       
+0000ebfc  f02_126                       
+0000ec10  f02_36                        
+0000ec24  f02_63                        
+0000ec38  f02_65                        
+0000ec4c  f02_83                        
+0000ec60  f02_84                        
+0000ec74  f02_86                        
+0000ec88  f02_100                       
+0000ec9a  f02_101                       
+0000ecac  f02_103                       
+0000ecbe  f02_104                       
+0000ecd0  f02_107                       
+0000ece2  f02_110                       
+0000ecf4  f02_112                       
+0000ed06  f02_113                       
+0000ed18  f02_114                       
+0000ed2a  f02_117                       
+0000ed3c  f02_118                       
+0000ed4e  f02_121                       
+0000ed60  f02_122                       
+0000ed72  f02_29                        
+0000ed84  f02_30                        
+0000ed96  f02_31                        
+0000eda8  f02_32                        
+0000edba  f02_42                        
+0000edcc  f02_48                        
+0000edde  f02_51                        
+0000edf0  f02_52                        
+0000ee02  f02_53                        
+0000ee14  f02_54                        
+0000ee26  f02_55                        
+0000ee38  f02_56                        
+0000ee4a  f02_57                        
+0000ee5c  f02_60                        
+0000ee6e  f02_61                        
+0000ee80  f02_62                        
+0000ee92  f02_69                        
+0000eea4  f02_70                        
+0000eeb6  f02_95                        
+0000eec8  f02_97                        
+0000eeda  f02_98                        
+0000eeec  f02_99                        
+0000eefe  f02_115                       
+0000ef0e  f02_120                       
+0000ef1e  f02_43                        
+0000ef2e  f02_47                        
+0000ef3e  f02_50                        
+0000ef4e  f02_76                        
+0000ef5e  f02_94                        
+0000ef6e  f02_default                   
+0000ef7e  f02_102                       
+0000ef8c  f02_123                       
+0000ef9a  f02_125                       
+0000efa8  f02_92                        
+0000efb6  f02_116                       
+0000efc2  f02_34                        
+0000efce  f02_40                        
+0000efda  f02_41                        
+0000efe6  f02_49                        
+0000eff2  f02_74                        
+0000effe  f02_91                        
+0000f00a  f02_93                        
+0000f016  f02_106                       
+0000f020  f02_44                        
+0000f02a  f02_45                        
+0000f034  f02_46                        
+0000f03e  f02_96                        
+0000f048  f02_105                       
+0000f050  f02_108                       
+0000f058  f02_33                        
+0000f060  f02_58                        
+0000f068  f02_59                        
+0000f070  f02_73                        
+0000f078  f02_124                       
+0000f07e  f02_39                        
+0000f084  main                          
+0000f204  LoadText                      
+0000f382  OutChar                       
+0000f470  InitDisplay                   
+0000f4fa  BlankScreen                   
+0000f57c  MapRAMToDisplay               
+0000f5e0  LoadBitmap                    
+0000f634  SerialOut                     
+0000f688  __TI_auto_init_nobinit_nopinit
+0000f6ca  SetLocation                   
+0000f70a  OutString                     
+0000f742  WriteLUT                      
+0000f778  InitFrameBuffer               
+0000f7a4  __mspabi_srai                 
+0000f7b0  __mspabi_srai_15              
+0000f7b2  __mspabi_srai_14              
+0000f7b4  __mspabi_srai_13              
+0000f7b6  __mspabi_srai_12              
+0000f7b8  __mspabi_srai_11              
+0000f7ba  __mspabi_srai_10              
+0000f7bc  __mspabi_srai_9               
+0000f7be  __mspabi_srai_8               
+0000f7c0  __mspabi_srai_7               
+0000f7c2  __mspabi_srai_6               
+0000f7c4  __mspabi_srai_5               
+0000f7c6  __mspabi_srai_4               
+0000f7c8  __mspabi_srai_3               
+0000f7ca  __mspabi_srai_2               
+0000f7cc  __mspabi_srai_1               
+0000f7d0  WriteFrameBuffer              
+0000f7fa  Reset                         
+0000f820  DisplayFrame                  
+0000f844  _c_int00_noargs               
+0000f860  InitDriver                    
+0000f87a  watchdog_timer                
+0000f894  WriteCommand                  
+0000f8a8  WriteData                     
+0000f8bc  __TI_zero_init_nomemset       
+0000f8d0  __mspabi_mpyi                 
+0000f8d0  __mspabi_mpyi_sw              
+0000f8e4  __mspabi_func_epilog_7        
+0000f8e6  __mspabi_func_epilog_6        
+0000f8e8  __mspabi_func_epilog_5        
+0000f8ea  __mspabi_func_epilog_4        
+0000f8ec  __mspabi_func_epilog_3        
+0000f8ee  __mspabi_func_epilog_2        
+0000f8f0  __mspabi_func_epilog_1        
+0000f8f4  CallInISR                     
+0000f8fe  PollBusy                      
+0000f906  __TI_ISR_TRAP                 
+0000f90e  InitTimerSystem               
+0000f914  C$$EXIT                       
+0000f914  abort                         
+0000f91a  _system_pre_init              
+0000f91e  _system_post_cinit            
+0000f924  __TI_Handler_Table_Base       
+0000f926  __TI_CINIT_Base               
+0000f926  __TI_Handler_Table_Limit      
+0000f92a  __TI_CINIT_Limit              
+0000ffe0  __TI_int00                    
+0000ffe4  __TI_int02                    
+0000ffe6  __TI_int03                    
+0000ffea  __TI_int05                    
+0000ffec  __TI_int06                    
+0000ffee  __TI_int07                    
+0000fff0  __TI_int08                    
+0000fff2  __TI_int09                    
+0000fff4  __TI_int10                    
+0000fff6  __TI_int11                    
+0000fff8  __TI_int12                    
+0000fffa  __TI_int13                    
+0000fffc  __TI_int14                    
+0000fffe  _reset_vector                 
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __c_args__                    
+
+[287 symbols]
